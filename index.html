@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Nadu Electricity Bill Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+  <div class="background-elements">
+    <div class="temple-silhouette"></div>
+    <div class="electric-wave"></div>
+    <div class="tower-silhouette"></div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <div class="tn-logo">
+        <i class="fas fa-landmark"></i>
+        <span>TAMIL NADU GOVERNMENT</span>
+        <i class="fas fa-landmark"></i>
+      </div>
+      <h1><i class="fas fa-bolt"></i> TANGEDCO Bill Calculator</h1>
+      <p>Calculate your electricity bill as per Tamil Nadu Government rates</p>
+    </div>
+
+    <div class="calculator-card">
+      <div class="input-group">
+        <label for="units"><i class="fas fa-tachometer-alt"></i> Enter Units Consumed (kWh)</label>
+        <div class="input-with-icon">
+          <i class="fas fa-bolt"></i>
+          <input type="number" id="units" placeholder="e.g. 250" min="0" step="1" value="150">
+        </div>
+        
+        <div class="slider-container">
+          <div class="slider-label">
+            <span>0 kWh</span>
+            <span id="slider-value">150 kWh</span>
+            <span>500 kWh</span>
+          </div>
+          <input type="range" id="unit-slider" min="0" max="500" value="150" step="1">
+        </div>
+      </div>
+
+      <div class="tariff-info">
+        <h3><i class="fas fa-info-circle"></i> Current Tamil Nadu Tariff Rates (Residential)</h3>
+        <div class="tariff-rates">
+          <div class="rate-item">
+            <span class="rate-range">0 - 100 units</span>
+            <span class="rate-price">₹3.50/unit</span>
+          </div>
+          <div class="rate-item">
+            <span class="rate-range">101 - 200 units</span>
+            <span class="rate-price">₹4.60/unit</span>
+          </div>
+          <div class="rate-item">
+            <span class="rate-range">201 - 500 units</span>
+            <span class="rate-price">₹6.90/unit</span>
+          </div>
+          <div class="rate-item">
+            <span class="rate-range">Above 500 units</span>
+            <span class="rate-price">₹7.10/unit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button class="calculate-btn" id="calculate-btn">
+          <i class="fas fa-calculator"></i> Calculate TNEB Bill
+        </button>
+      </div>
+    </div>
+
+    <div class="result-container" id="result-container">
+      <div class="result-header">
+        <div class="result-title">TANGEDCO Electricity Bill</div>
+        <div class="result-subtitle">Tamil Nadu Electricity Board</div>
+      </div>
+      
+      <div class="bill-summary">
+        <div class="bill-amount" id="bill-amount">₹0.00</div>
+        <div class="unit-info">For <span id="result-units">0</span> units consumed</div>
+      </div>
+      
+      <div class="tariff-breakdown">
+        <h3><i class="fas fa-receipt"></i> Tariff Breakdown as per TN Govt</h3>
+        
+        <div class="breakdown-section">
+          <div class="breakdown-item">
+            <span class="breakdown-label">First 100 units @ ₹3.50/unit</span>
+            <span class="breakdown-value" id="breakdown-1">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="breakdown-label">101-200 units @ ₹4.60/unit</span>
+            <span class="breakdown-value" id="breakdown-2">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="breakdown-label">201-500 units @ ₹6.90/unit</span>
+            <span class="breakdown-value" id="breakdown-3">₹0.00</span>
+          </div>
+          <div class="breakdown-item">
+            <span class="breakdown-label">Above 500 units @ ₹7.10/unit</span>
+            <span class="breakdown-value" id="breakdown-4">₹0.00</span>
+          </div>
+        </div>
+        
+        <div class="total-breakdown">
+          <span class="total-label">Subtotal</span>
+          <span class="total-value" id="breakdown-subtotal">₹0.00</span>
+        </div>
+        
+        <div class="additional-charges">
+          <div class="charge-item">
+            <span class="charge-label">Fixed Charges</span>
+            <span class="charge-value" id="fixed-charges">₹25.00</span>
+          </div>
+          <div class="charge-item">
+            <span class="charge-label">Tax & Surcharge (8%)</span>
+            <span class="charge-value" id="tax-amount">₹0.00</span>
+          </div>
+        </div>
+        
+        <div class="final-total">
+          <span class="final-label">Total Bill Amount</span>
+          <span class="final-value" id="breakdown-total">₹0.00</span>
+        </div>
+      </div>
+      
+      <div class="bill-footer">
+        <p><i class="fas fa-lightbulb"></i> <strong>Energy Saving Tip:</strong> Reduce consumption during peak hours (6 PM - 10 PM) to save energy</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="tn-power-info">
+          <i class="fas fa-industry"></i>
+          <span>Tamil Nadu Generation and Distribution Corporation Limited (TANGEDCO)</span>
+        </div>
+        <p class="disclaimer">Rates are based on LT Tariff I-A (Domestic) effective from June 2023. Actual bill may vary based on additional charges.</p>
+        <p class="copyright">© 2023 Tamil Nadu Electricity Board | <a href="#" id="info-link">Official TNEB Website</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a2a43 0%, #1a4a7a 100%);
+  color: #f0f8ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Tamil Nadu themed background */
+.background-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.temple-silhouette {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, rgba(10, 42, 67, 0.9) 0%, transparent 100%);
+  z-index: 0;
+}
+
+.electric-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23006aff10"/></svg>');
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.tower-silhouette {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 60px;
+  height: 150px;
+  background: linear-gradient(to top, #ff9933, transparent);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  opacity: 0.1;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ff9933, #ffd700, #138808);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.tn-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  justify-content: center;
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tn-logo i {
+  font-size: 18px;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #ff9933, #ffd700, #138808);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.header p {
+  color: #a0d2ff;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.calculator-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #b3e0ff;
+  font-size: 16px;
+}
+
+.input-group label i {
+  margin-right: 8px;
+  color: #ffd700;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon i {
+  position: absolute;
+  left: 15px;
+  color: #ffd700;
+  font-size: 20px;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 16px 16px 16px 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 215, 0, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: #ff9933;
+  box-shadow: 0 0 10px rgba(255, 153, 51, 0.3);
+}
+
+.slider-container {
+  margin-top: 15px;
+  padding: 10px 0;
+}
+
+.slider-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.slider-label span {
+  font-size: 14px;
+  color: #a0d2ff;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff9933;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 153, 51, 0.8);
+}
+
+.tariff-info {
+  background: rgba(0, 30, 60, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.tariff-info h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tariff-rates {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #ff9933;
+}
+
+.rate-range {
+  color: #b3e0ff;
+  font-size: 14px;
+}
+
+.rate-price {
+  color: #ffd700;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.calculate-btn {
+  background: linear-gradient(90deg, #ff9933, #ffd700);
+  color: #0a2a43;
+  border: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(255, 153, 51, 0.4);
+}
+
+.calculate-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 153, 51, 0.6);
+  background: linear-gradient(90deg, #e68a00, #e6c200);
+}
+
+.calculate-btn:active {
+  transform: translateY(1px);
+}
+
+.result-container {
+  background: rgba(0, 30, 60, 0.7);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 25px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  display: none;
+}
+
+.result-container.show {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.result-title {
+  font-size: 22px;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.result-subtitle {
+  color: #a0d2ff;
+  font-size: 14px;
+}
+
+.bill-summary {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.bill-amount {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffd700;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.unit-info {
+  color: #b3e0ff;
+  font-size: 16px;
+}
+
+.unit-info span {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.tariff-breakdown {
+  background: rgba(0, 20, 40, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.tariff-breakdown h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breakdown-section {
+  margin-bottom: 15px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.breakdown-label {
+  color: #b3e0ff;
+  font-size: 14px;
+}
+
+.breakdown-value {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.total-breakdown {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 215, 0, 0.3);
+  font-weight: 600;
+  color: #ffd700;
+}
+
+.additional-charges {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed rgba(255, 215, 0, 0.2);
+}
+
+.charge-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.charge-label {
+  color: #b3e0ff;
+}
+
+.charge-value {
+  color: #fff;
+  font-weight: 500;
+}
+
+.final-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #ff9933;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffd700;
+}
+
+.bill-footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 153, 51, 0.1);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #b3e0ff;
+  border-left: 3px solid #ff9933;
+}
+
+.bill-footer i {
+  color: #ffd700;
+  margin-right: 8px;
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.footer-content {
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+  padding-top: 20px;
+}
+
+.tn-power-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.disclaimer {
+  color: #88c1ff;
+  font-size: 12px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.copyright {
+  color: #88c1ff;
+  font-size: 12px;
+}
+
+.copyright a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+  .container {
+    padding: 25px;
+    max-width: 95%;
+  }
+  
+  .header h1 {
+    font-size: 26px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .calculator-card {
+    padding: 20px;
+  }
+  
+  .tariff-rates {
+    grid-template-columns: 1fr;
+  }
+  
+  .bill-amount {
+    font-size: 36px;
+  }
+  
+  .result-title {
+    font-size: 20px;
+  }
+}
